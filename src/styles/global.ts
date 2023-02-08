@@ -1,4 +1,4 @@
-import { createGlobalStyle } from "styled-components";
+import { createGlobalStyle } from 'styled-components'
 
 export const GlobalStyle = createGlobalStyle`
 *{
@@ -8,7 +8,7 @@ export const GlobalStyle = createGlobalStyle`
 }
 
 body{
-    background: ${({ theme }) => theme["gray-900"]};
+    background: ${({ theme }) => theme['gray-900']};
     color: #fff;
 }
 
@@ -17,4 +17,4 @@ body ,input, textarea, button {
     font-weight: 400;
     font-size: 1rem;
 }
-`;
+`
