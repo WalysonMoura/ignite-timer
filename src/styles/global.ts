@@ -11,6 +11,7 @@ body{
     background: ${({ theme }) => theme['gray-900']};
     color: #fff;
     -webkit-font-smoothing: antialiased;
+    
 }
 
 body ,input, textarea, button {

@@ -20,7 +20,9 @@ export function History() {
               <td>Tarefa</td>
               <td>Tarefa</td>
               <td>Tarefa</td>
-              <td>Tarefa</td>
+              <td>
+                <Style.Status statusColor="red">Status</Style.Status>
+              </td>
             </tr>
           </tbody>
         </table>
