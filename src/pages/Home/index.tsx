@@ -7,10 +7,17 @@ export function Home() {
       <form action="">
         <Style.FormContainer>
           <label htmlFor="task">Vou trabalhar as</label>
-          <input type="text" id="task" />
+          <Style.TaskInput type="text" id="task" list="task-suggestions"/>
+
+          <details id="task-suggestions">
+            <option value=""></option>
+            <option value=""></option>
+            <option value=""></option>
+            <option value=""></option>
+          </details>
 
           <label htmlFor="minutesAmount"></label>
-          <input type="number" id="minutesAmount" />
+          <Style.MinutesAmountInput type="number" id="minutesAmount" step={5} min={5} max={60} />
         </Style.FormContainer>
 
         <Style.CountdownContainer>
