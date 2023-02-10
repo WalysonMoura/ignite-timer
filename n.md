@@ -118,6 +118,23 @@ npm i  -D babel-plugin-styled-components
 
 <details>
  <summary><h2>Formulários</h2></summary>
+
+* ## React Hook Form
+```
+  npm i  react-hook-form 
+```
+
+* ## Zod
+
+```
+  npm i zod
+```
+
+```
+  npm i @hookform/resolvers
+```
+
+
 <details>
 
 * ## React icons
