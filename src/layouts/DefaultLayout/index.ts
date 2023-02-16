@@ -1,15 +1,14 @@
 import { Outlet } from "react-router-dom";
 import { Header } from "../../components/Header";
 
-import { LayoutConteiner } from "./style";
-/* eslint-disable prettier/prettier */
-// eslint-disable-next-line prettier/prettier
+import * as Style from "./style";
+
 
 export function DefaultLayout() {
   return (
-    <LayoutConteiner>
+    <Style.LayoutConteiner>
       <Header />
-      <Outlet />
-    </LayoutConteiner>
+      <Outlet/>
+    </Style.LayoutConteiner>
   );
 }
