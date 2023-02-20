@@ -23,7 +23,7 @@ export function Countdown() {
       document.title = `${minutes}:${secunds}`;
     }
   }, [minutes, secunds, activeCycle]);
-F
+
 
   useEffect(() => {
     let interval: number;
@@ -38,10 +38,10 @@ F
         if (secundsDifference >= totalSeconds) {
          markCurrentCycleAsFinished()
 
-          setAmountSecondsPassed(totalSeconds);
+          setSecundsPassed(totalSeconds);
           clearInterval(interval);
         } else {
-          setAmountSecondsPassed(secundsDifference);
+          setSecundsPassed(secundsDifference);
         }
       }, 1000);
     }

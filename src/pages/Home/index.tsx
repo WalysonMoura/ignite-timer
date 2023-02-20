@@ -10,23 +10,7 @@ import { differenceInSeconds } from "date-fns";
 import { NewCycleForm } from "./components/NewCycleForm";
 import { Countdown } from "./components/Countdown";
 
-interface Cycle {
-  id: string;
-  task: string;
-  minutesAmount: number;
-  startDate: Date;
-  interruptedDate?: Date;
-  finishedDate?: Date;
-}
 
-interface CycleContextType {
-  activeCycle: Cycle | undefined;
-  activeCycleId: string | null;
-  markCurrentCycleAsFinished: () => void;
-  amountSecondsPassed: number 
-  setSecundsPassed: (seconds: number) => ()
-  
-}
 
 export const CyclesContext = createContext({} as CycleContextType);
 
@@ -118,17 +102,13 @@ function setSecundsPassed(seconds:number) {
   return (
     <Style.HomeContainer>
       <form onSubmit={handleSubmit(handleCreateNewCycle)} action="">
-        <CyclesContext.Provider
-          value={{ activeCycle, activeCycleId, markCurrentCycleAsFinished,amountSecondsPassed,setSecundsPassed,
-            
-          ` }}
-        >
+        
           <FormProvider {...newCycleForm}>
             <NewCycleForm />
           </FormProvider>
 
           <Countdown />
-        </CyclesContext.Provider>
+      
 
         {activeCycle ? (
           <Style.StoptCountdownButton
