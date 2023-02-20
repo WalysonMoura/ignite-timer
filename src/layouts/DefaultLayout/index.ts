@@ -5,10 +5,12 @@ import * as Style from "./style";
 
 
 export function DefaultLayout() {
-  return (
+  return   
+    (
     <Style.LayoutConteiner>
       <Header />
       <Outlet/>
     </Style.LayoutConteiner>
-  );
+    )
+  
 }
