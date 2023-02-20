@@ -15,7 +15,7 @@ interface Cycle {
 }
 
 interface CycleContextType {
-  cycle: Cycle[]
+  cycles: Cycle[]
   activeCycle: Cycle | undefined;
   activeCycleId: string | null;
   amountSecondsPassed: number;
