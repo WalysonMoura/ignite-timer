@@ -1,7 +1,5 @@
-/* eslint-disable prettier/prettier */
 import styled from "styled-components";
 
-// eslint-disable-next-line prettier/prettier
 export const LayoutConteiner = styled.div`
   max-width: 74rem;
   height: calc(100vh - 10rem);

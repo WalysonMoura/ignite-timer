@@ -4,8 +4,7 @@ import * as Style from "./style";
 import { FormProvider, useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import zod from "zod";
-import { useContext} from "react";
-
+import { useContext } from "react";
 
 import { NewCycleForm } from "./components/NewCycleForm";
 import { Countdown } from "./components/Countdown";
@@ -35,12 +34,17 @@ export function Home() {
 
   const { register, handleSubmit, watch, reset } = newCycleForm;
 
+  function handleNewCycleForm(data: NewCycleFormData) {
+    createNewCycle(data);
+    reset();
+  }
+
   const task = watch("task");
   const isSubmitDisabled = !task;
 
   return (
     <Style.HomeContainer>
-      <form onSubmit={handleSubmit(createNewCycle)} action="">
+      <form onSubmit={handleSubmit(handleNewCycleForm)} action="">
         <FormProvider {...newCycleForm}>
           <NewCycleForm />
         </FormProvider>

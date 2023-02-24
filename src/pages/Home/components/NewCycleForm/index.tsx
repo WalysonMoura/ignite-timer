@@ -3,7 +3,7 @@ import * as Style from "./style";
 import * as zod from "zod";
 import { useForm, useFormContext } from "react-hook-form";
 import { useContext } from "react";
-import { CyclesContext } from "../..";
+import { CyclesContext } from "../../../../contexts/CyclesContext";
 
 export function NewCycleForm() {
   const { activeCycle } = useContext(CyclesContext);
