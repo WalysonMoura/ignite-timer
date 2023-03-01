@@ -20,19 +20,22 @@ export function History() {
               <th>Inicio</th>
               <th>Status</th>
             </tr>
-          </thead>pt
+          </thead>
+          pt
           <tbody>
             {cycles.map((cycle) => {
               return (
                 <tr key={cycle.id}>
                   <td>{cycle.task}</td>
                   <td>{cycle.minutesAmount}</td>
-                  <td>{formatDistanceToNow(cycle.startDate,{
-                    addSuffix: true,
-                    locale: ptBR
-                  })}</td>
                   <td>
-                    {cycle.finishedDate && ( 
+                    {formatDistanceToNow(new Date(cycle.startDate), {
+                      addSuffix: true,
+                      locale: ptBR,
+                    })}
+                  </td>
+                  <td>
+                    {cycle.finishedDate && (
                       <Style.Status statusColor="green">Concluído</Style.Status>
                     )}
                     {cycle.interruptedDate && (

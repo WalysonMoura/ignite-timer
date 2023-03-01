@@ -11,7 +11,7 @@ export function Router() {
         <Route path="/history" element={<History />}></Route>
       </Route>
 
-      <Route path="/admin" element={<AdminLayout />}></Route>
+      {/*}<Route path="/admin" element={<AdminLayout />}></Route>{*/}
     </Routes>
   )
 }
